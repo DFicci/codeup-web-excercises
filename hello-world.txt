@@ -1,0 +1,2 @@
+hello world
+We are learning to use terminal!
