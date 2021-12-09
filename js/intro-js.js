@@ -53,7 +53,8 @@ if (product < items){
 let username = "codeup";
 let password = 'notastrongpassword';
 {
-    username = username.trim(), password = password.trim()
+    username = username.trim();
+    password = password.trim();
 }
 //the username cannot be in the password/no white spaces
 if ((password.includes(username)) && (password.length > 5) && (username.length <= 20)){
