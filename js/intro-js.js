@@ -24,20 +24,34 @@ if (course > 25) {
     message = "\nSorry, please choose a different class. All seats are filled."
 } else if (course < 25 ) {
     message = "\nCongratulations on your enrollment into the class!"
-};
+}
 console.log(message)
 
 //Product discount
 var product = 5;
 var discount = .20;
-var items = 2;
+var items = 6;
 var price = 5;
 var equal;
 var pay;
-if (product > items){
-    pay = (price * discount), equal = price - pay
-} else if (product < items){
+if (product < items){
+    pay = (price * discount);
+    equal = price - pay;
+    console.log("\nSince you bought 5 items you received a 20 percent" +
+        " discount, your new total is $" + equal + ".")
+} else {
     equal = price
-};
-console.log("\nSince you bought 5 items you received a 20 percent" +
-    " discount, your new total is $" + equal + ".")
+}
+
+// Creating username and password under conditions
+let username = "codeup";
+let password = 'notastrongpassword';
+//the username cannot be in the password/no white spaces
+//still need to setup no white spaces
+if ((password.includes(username)) && (password.length > 5) && (username.length <= 20)){
+    console.log("Sorry, Username and Password cannot be created")
+} else {
+    console.log("\nYour account is all setup!")
+}
+
+//There should be no white spaces
