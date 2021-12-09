@@ -46,8 +46,10 @@ if (product < items){
 // Creating username and password under conditions
 let username = "codeup";
 let password = 'notastrongpassword';
+{
+    username = username.trim(), password = password.trim()
+}
 //the username cannot be in the password/no white spaces
-//still need to setup no white spaces
 if ((password.includes(username)) && (password.length > 5) && (username.length <= 20)){
     console.log("Sorry, Username and Password cannot be created")
 } else {
