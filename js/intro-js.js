@@ -28,11 +28,17 @@ if (course > 25) {
 console.log(message)
 
 //Product discount
+//How many products?
 var product = 5;
+//How much of a discount
 var discount = .20;
+//how many items needed for discount
 var items = 6;
+//the price of each product
 var price = 5;
+//used to get the total amount after discount
 var equal;
+//used to get the discount
 var pay;
 if (product < items){
     pay = (price * discount);
@@ -55,5 +61,3 @@ if ((password.includes(username)) && (password.length > 5) && (username.length <
 } else {
     console.log("\nYour account is all setup!")
 }
-
-//There should be no white spaces
