@@ -7,8 +7,8 @@ let sum = (mermaid + bear + hercules);
 let n = sum * 3
 console.log("In order to watch all 3 movies with your kids, \nYou would have to pay a total of " + "$" + n + " for the movies.");
 
-//Working as a contractor for Google, Amazon, and Facebook
-//hours worked
+//Working as a contractor for Google, Amazon, and Facebook.
+//hours worked.
 let google = 6, amazon = 4, fb = 10;
 //hourly wage, h = hourly rate
 let gh = 400, amazonh = 380, fbh = 350;
@@ -18,11 +18,12 @@ let total = (google + gh) + (amazon + amazonh) + (fb + fbh);
 console.log("\nThe total amount of money you would make as a contractor for all three companies is " + "$" + total);
 
 // if a student tries to enroll in class
-let student = 1, enrolled = 23, course = student + enrolled;
+let student = 1, enrolled = 25, course = student + enrolled;
+//Message to be relayed when enrolling in class
 let message;
-if (course > 25) {
+if (course >= 26) {
     message = "\nSorry, please choose a different class. All seats are filled."
-} else if (course < 25) {
+} else if (course <= 25) {
     message = "\nCongratulations on your enrollment into the class!"
 }
 console.log(message)
@@ -51,7 +52,7 @@ if (product < items) {
 
 // Creating username and password under conditions
 let username = "codeup";
-let password = 'notastrongpassword';
+let password = "notastrongpassword";
 
 username = username.trim();
 password = password.trim();
