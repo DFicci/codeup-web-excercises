@@ -30,24 +30,24 @@ console.log(message)
 
 //Product discount
 //How many products?
-let product = 5;
+let product = 1;
 //How much of a discount
 let discount = .20;
 //how many items needed for discount
-let items = 6;
+let items = 2;
 //the price of each product
 let price = 5;
-//used to get the total amount after discount
-let equal;
-//used to get the discount
-let pay;
-if (product < items) {
+//Place holders
+let equal, pay
+
+if (product >= items) {
     pay = (price * discount);
     equal = price - pay;
-    console.log("\nSince you bought 5 items you received a 20 percent" +
+    console.log("\nSince you bought " + product + " items you received a 20 percent" +
         " discount, your new total is $" + equal + ".")
 } else {
     equal = price
+    console.log("\nWe have a discount today, would you like to buy another item to recieve that disount.")
 }
 
 // Creating username and password under conditions
