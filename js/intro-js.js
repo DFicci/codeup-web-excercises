@@ -47,7 +47,7 @@ if (product >= items) {
         " discount, your new total is $" + equal + ".")
 } else {
     equal = price
-    console.log("\nWe have a discount today, would you like to buy another item to recieve that disount.")
+    console.log("\nWe have a discount today, would you like to buy another item to receive that discount.")
 }
 //----------------------------------------------------------------------------------------------------------------------
 //username and password
