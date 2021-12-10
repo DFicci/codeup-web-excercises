@@ -13,7 +13,7 @@ let google = 6, amazon = 4, fb = 10;
 //hourly wage, h = hourly rate
 let gh = 400, amazonh = 380, fbh = 350;
 //addition
-let total = (google + gh) + (amazon + amazonh) + (fb + fbh);
+let total = (google * gh) + (amazon * amazonh) + (fb * fbh);
 //total amount made
 console.log("\nThe total amount of money you would make as a contractor for all three companies is " + "$" + total);
 
