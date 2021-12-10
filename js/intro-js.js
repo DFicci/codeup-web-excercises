@@ -82,9 +82,7 @@ console.log(sample.indexOf("c"));
 console.log(sample.indexOf("C"));
 // use substring first, then index of
 console.log(sample.substring(sample.indexOf("c"),sample.indexOf("p") + 1));
-
 // --------------------------------------------------------------------------------------------------------------------
-
 /*In class excercise
 *Using the provided variables, create a piece of logic which will determine if a person
 *is qualified to get an extended auto loan.
@@ -98,3 +96,4 @@ if ((creditScore > 680) && (cashOnHand >= 4000) || (cashOnHand >= 10000)){
     console.log("Congratulations, you've been accepted into our extended auto loan program!")
 } else
     console.log("Sorry to inform you that you do not meet our requirements for our auto loan program.")
+//----------------------------------------------------------------------------------------------------------------------
