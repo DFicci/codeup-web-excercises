@@ -50,26 +50,35 @@ if (product >= items) {
     console.log("\nWe have a discount today, would you like to buy another item to recieve that disount.")
 }
 
-// Creating username and password under conditions
-let username = "codeup";
-let password = "notastrongpassword";
+//username and password
+let username = 'codeup';
+let password = 'notastrongpassword';
 
+//Used to create no white space at the beginning or end
 username = username.trim();
 password = password.trim();
 
-//the username cannot be in the password/no white spaces
-if ((password.includes(username)) && (password.length > 5) && (username.length <= 20)) {
-    console.log("\nSorry, Username and Password cannot be created")
-} else {
-    console.log("\nYour account is all setup!")
+//Used to ensure the length does not exceed
+let user = username.substring(username.length);
+
+/*Conditions are required in order to create an account
+ *Password must not contain the username
+ *Username must not exceed a specified character length of 20
+ *Password must not be below specified character length of 5
+ */
+if ((password.includes(user)) && (username.length > 20) && (password.length < 5)) {
+    console.log("\nAccount could not be created, please follow instructions.")
+} else
+    console.log("\nYour account has been successfully created, Welcome " + username + "!");{
 }
 
 //excercise 2
 let sample = "\nhello codeup";
-console.log(sample.length)
-console.log(sample.toUpperCase())
-console.log(sample.toLowerCase())
-console.log(sample + " students")
-console.log(sample.indexOf("c"))
-console.log(sample.indexOf("C"))
-console.log(sample.substring(sample.indexOf("c"),sample.indexOf("p") + 1))
+console.log(sample.length);
+console.log(sample.toUpperCase());
+console.log(sample.toLowerCase());
+console.log(sample + " students");
+console.log(sample.indexOf("c"));
+console.log(sample.indexOf("C"));
+// use substring first, then index of
+console.log(sample.substring(sample.indexOf("c"),sample.indexOf("p") + 1));
