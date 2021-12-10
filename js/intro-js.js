@@ -66,7 +66,7 @@ let user = username.substring(username.length);
  *Username must not exceed a specified character length of 20
  *Password must not be below specified character length of 5
  */
-if ((password.includes(user)) && (username.length > 20) && (password.length < 5)) {
+if ((password.includes(user)) || (username.length > 20) || (password.length < 5)) {
     console.log("\nAccount could not be created, please follow instructions.")
 } else
     console.log("\nYour account has been successfully created, Welcome " + username + "!");{
