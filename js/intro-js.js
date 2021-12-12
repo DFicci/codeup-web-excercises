@@ -82,7 +82,7 @@ console.log(sample.indexOf("c"));
 console.log(sample.indexOf("C"));
 // use substring first, then index of
 console.log(sample.substring(sample.indexOf("c"),sample.indexOf("p") + 1));
-// --------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 /*In class excercise
 *Using the provided variables, create a piece of logic which will determine if a person
 *is qualified to get an extended auto loan.
