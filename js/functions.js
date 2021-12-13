@@ -122,8 +122,8 @@ function isFive(x){
 let rndmNumber = Math.floor((Math.random() * 5) + 1)
 console.log(isFive(rndmNumber))
 console.log((rndmNumber))
-//----------------------------------------------------------------------------------------------------------------------
-// Make a function named isOdd(number)----------------------------------------------------------------------------------
+//<-------------------------------------------------------------------------------------------------------------------->
+// Make a function named isOdd(number)<-------------------------------------------------------------------------------->
 function isOdd(number){
     if(number%2 == 0){
         return false
@@ -132,60 +132,60 @@ function isOdd(number){
     }
 }
 console.log(isOdd(2))
-// Make a function named isEven(number)---------------------------------------------------------------------------------
+// Make a function named isEven(number)<------------------------------------------------------------------------------->
 function isEven(number){
     return number%2 === 0
 }
 console.log(isEven(1))
-// Make a function named identity(input) that returns the input exactly as provided.------------------------------------
+// Make a function named identity(input) that returns the input exactly as provided.<---------------------------------->
 function identity(input){
     return input
 }
 console.log(identity("hello"))
-// Make a function named isFive(input)----------------------------------------------------------------------------------
+// Make a function named isFive(input)<-------------------------------------------------------------------------------->
 function isFive(input){
     return input === 5
 }
 console.log(isFive(5))
-// Make a function named addFive(input) that adds five to some input.---------------------------------------------------
+// Make a function named addFive(input) that adds five to some input.<------------------------------------------------->
 function addFive(input){
     let five = input + 5;
     return five
 }
 console.log(addFive(10))
-// Make a function named isMultipleOfFive(input)------------------------------------------------------------------------
+// Make a function named isMultipleOfFive(input)<---------------------------------------------------------------------->
 function isMultipleOfFive(input){
     let multipleFive = input%5 === 0
     return multipleFive
 }
 console.log(isMultipleOfFive(10))
-// Make a function named isThree(input)---------------------------------------------------------------------------------
+// Make a function named isThree(input)<------------------------------------------------------------------------------->
 function isThree(input){
     return input === 3
 }
 console.log(isThree(4))
-// Make a function named isMultipleOfThree(input)-----------------------------------------------------------------------
+// Make a function named isMultipleOfThree(input)<--------------------------------------------------------------------->
 function isMultipleOfThree(input){
     let multipleThree = input%3 === 0
     return multipleThree
 }
 console.log(isMultipleOfThree(11))
-// Make a function named isMultipleOfThreeAndFive(input)----------------------------------------------------------------
+// Make a function named isMultipleOfThreeAndFive(input)<-------------------------------------------------------------->
 function isMultipleOfThreeAndFive(input){
     return (input%5 === 0 || input%3 === 0)
 }
 console.log(isMultipleOfThreeAndFive(8))
-// Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n------------------------
+// Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n<---------------------->
 function isMultipleof(target,n){
     return (n%target === 0)
 }
 console.log(isMultipleof(3, 9))
-// Make a function named isTrue(boolean)--------------------------------------------------------------------------------
+// Make a function named isTrue(boolean)<------------------------------------------------------------------------------>
 function isTrue(boolean){
     return true
 }
 console.log(isTrue())
-// Make a function named isFalse(boolean)-------------------------------------------------------------------------------
+// Make a function named isFalse(boolean)<----------------------------------------------------------------------------->
 function isFalse(boolean){
     return false
 }
@@ -201,59 +201,88 @@ console.log(isFalse())
 // Make a function named isZero(number)
 // Make a function named notZero(input) that returns true if the input is not zero
 // Write a function named lowerCase(string)
-// Write a function named double(n) that returns a number times two
-// Write a function named triple(n) that returns a number times 3
-// Write a function named quadruple(n) that returns a number times 4
-// Write a function named half(n) that returns 1/2 of the provided input
-// Write a function named subtract(a, b) that returns a minus b
-// Write a function named multiply(a, b) that returns the product of a times b
-// Write a function named divide(a, b) that returns a divided by b
-// Write a function named remainder(a, b) that returns the remainder after dividing a by b
-// Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
-// Write a function named cube(n) that returns n * n * n
-// Write a function named squareRoot(n) that returns the square root of the input
-// Write a function named cubeRoot(n) that returns the cube root of the input
-// Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
-// Write a function named degreesToRadians(number)
-// Write a function named radiansToDegrees(number)
-// Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
-// Make a function named trim(string) that removes empty spaces before and after the input.
-// Make a function named areEqual(input1, input2) that returns if both inputs have the same value
-// Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
-// Make a function named not(input) returns the input with a flipped boolean
-// Make a function named notNot(input) that the negation of the negation of the input.
-// Make a function named and(predicate1, predicate2) that returns the logical operation of AND
-// Make a function named or(predicate1, predicate2) that returns the logical operation of OR
-// Write a function called reverseString(string) that reverses a string
-// Make a function named absoluteValue(number) that returns the absolute value of a number.
+// Write a function named double(n) that returns a number times two<--------------------------------------------------->
+function double(n){
+    return n * 2
+}
+console.log(double(5))
+// Write a function named triple(n) that returns a number times 3<----------------------------------------------------->
+function triple(n){
+    return n * 3
+}
+// Write a function named quadruple(n) that returns a number times 4<-------------------------------------------------->
+function quadruple(n){
+    return n * 4
+}
+//Write a function named half(n) that returns 1/2 of the provided input<----------------------------------------------->
+function half(n){
+    return n * .5
+}
+//Write a function named subtract(a, b) that returns a minus b<-------------------------------------------------------->
+function subtract(a, b){
+    return a - b
+}
+//Write a function named multiply(a, b) that returns the product of a times b<----------------------------------------->
+function multiple(a, b){
+    return a * b
+}
+//Write a function named divide(a, b) that returns a divided by b<----------------------------------------------------->
+function divide(a, b){
+    return a / b
+}
+//Write a function named remainder(a, b) that returns the remainder after dividing a by b
+
+//Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b<--------------------->
+function modulo(a, b){
+    return a % b
+}
+//Write a function named cube(n) that returns n * n * n
+function cube(n){
+    return n * n * n
+}
+//Write a function named squareRoot(n) that returns the square root of the input
+//Write a function named cubeRoot(n) that returns the cube root of the input
+//Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+//Write a function named degreesToRadians(number)
+//Write a function named radiansToDegrees(number)
+//Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+//Make a function named trim(string) that removes empty spaces before and after the input.
+//Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+//Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+//Make a function named not(input) returns the input with a flipped boolean
+//Make a function named notNot(input) that the negation of the negation of the input.
+//Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+//Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+//Write a function called reverseString(string) that reverses a string
+//Make a function named absoluteValue(number) that returns the absolute value of a number.
 //Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have.
 //Generate a random number between 1 up to and including the number of sides.
 //
-// *Simple Function Drills*
-// Make a function called returnTwo() that returns the number 2 when called
+//*Simple Function Drills*
+//Make a function called returnTwo() that returns the number 2 when called
 //
-// Test this function with console.log(returnTwo())
+//Test this function with console.log(returnTwo())
 //
-//     Make a function called sayHowdy() which console.logs the string “Howdy!”
+//Make a function called sayHowdy() which console.logs the string “Howdy!”
 //
-// Test this function by directly calling sayHowdy()
+//Test this function by directly calling sayHowdy()
 //
-// Remember this function does not need a defined return value
+//Remember this function does not need a defined return value
 //
-// Make a function called returnName() that returns the string of your name
+//Make a function called returnName() that returns the string of your name
 //
-// Test this function with console.log(returnName())
+//Test this function with console.log(returnName())
 //
-//     Make a function called addThree() which takes in a number input and returns the number plus 3.
+//Make a function called addThree() which takes in a number input and returns the number plus 3.
 //
-// Test this function with console.log(addThree(5))
+//Test this function with console.log(addThree(5))
 //
-//     Make a function called sayString() which returns the string input passed in.
+//Make a function called sayString() which returns the string input passed in.
 //
-// Test this function with console.log(sayString('codeup'))
+//Test this function with console.log(sayString('codeup'))
 //
-//     Challenge Function Drills
-// Write a function called identity(input) that takes in an argument called input and returns that input.
+//Challenge Function Drills
+//Write a function called identity(input) that takes in an argument called input and returns that input.
 //
 //     Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
 //
