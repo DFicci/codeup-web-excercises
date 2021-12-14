@@ -10,3 +10,20 @@ function analyzeColor1(color){
 
 }
 console.log(analyzeColor1("Green"))
+
+gimmeNumber()
+function gimmeNumber(hopefullyANumber){
+    if(confirm("would you like to enter a number???") === true){
+        whatNumber()
+    }
+}
+function whatNumber(){
+    let userInput = prompt("what is your number")
+
+}
+if(parsedInput === 0){
+    alert("you're awesome")
+} else {
+    alert("access denied")
+}
+}
