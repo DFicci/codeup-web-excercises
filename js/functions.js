@@ -165,11 +165,11 @@
 // }
 // console.log(isThree(4))
 // // Make a function named isMultipleOfThree(input)<--------------------------------------------------------------------->
-// function isMultipleOfThree(input){
-//     let multipleThree = input%3 === 0
-//     return multipleThree
-// }
-// console.log(isMultipleOfThree(11))
+function isMultipleOfThree(input){
+    let multipleThree = input%3 === 0
+    return multipleThree
+}
+console.log(isMultipleOfThree(11))
 // // Make a function named isMultipleOfThreeAndFive(input)<-------------------------------------------------------------->
 // function isMultipleOfThreeAndFive(input){
 //     return (input%5 === 0 || input%3 === 0)
@@ -191,15 +191,15 @@
 // }
 // console.log(isFalse())
 // // Make a function named isTruthy(input), remember that values other than true will behave like true
-function isTruthy(input){
-    if (!!input){
-        return true
-    } else{
-        return false
-    }
-
-}
-console.log(isTruthy(false))
+// function isTruthy(input){
+//     if (!!input){
+//         return true
+//     } else{
+//         return false
+//     }
+//
+// }
+// console.log(isTruthy(false))
 // // Make a function named isFalsy(input), remember that values other than false behave like false
 // // Make a function named isVowel(letter)
 // // Make a function named isConsonant(letter)

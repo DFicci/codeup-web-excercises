@@ -83,22 +83,22 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal(luckyNumber, totalAmount){
-    if (luckyNumber === 0){
-        return totalAmount
-    } else if (luckyNumber ===1){
-        return totalAmount * .90
-    }else if (luckyNumber === 2) {
-        return totalAmount * .75
-    } else if (luckyNumber === 3){
-        return totalAmount * .65
-    } else if (luckyNumber === 4){
-        return totalAmount * .50
-    } else if (luckyNumber === 5){
-        return 0
-    }
-}
-console.log(calculateTotal(5,10))
+// function calculateTotal(luckyNumber, totalAmount){
+//     if (luckyNumber === 0){
+//         return totalAmount
+//     } else if (luckyNumber ===1){
+//         return totalAmount * .90
+//     }else if (luckyNumber === 2) {
+//         return totalAmount * .75
+//     } else if (luckyNumber === 3){
+//         return totalAmount * .65
+//     } else if (luckyNumber === 4){
+//         return totalAmount * .50
+//     } else if (luckyNumber === 5){
+//         return 0
+//     }
+// }
+// console.log(calculateTotal(5,10))
 
 
 
@@ -111,11 +111,11 @@ console.log(calculateTotal(5,10))
  * price before the discount was, and what their price after the discount is.
  */
 //Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-let customerBill = prompt("What is the total amount of your bill?")
-let actualtotal = calculateTotal(luckyNumber,customerBill)
-alert("your lucky number is " + luckyNumber)
-alert("Your price is " + "$" + actualtotal + ".")
+// var luckyNumber = Math.floor(Math.random() * 6);
+// let customerBill = prompt("What is the total amount of your bill?")
+// let actualtotal = calculateTotal(luckyNumber,customerBill)
+// alert("your lucky number is " + luckyNumber)
+// alert("Your price is " + "$" + actualtotal + ".")
 
 
 
@@ -137,3 +137,26 @@ alert("Your price is " + "$" + actualtotal + ".")
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+//Variables for the function
+ let confirmation = confirm("Would you like to enter a number?")
+ let getNumber = prompt("Enter your number")
+ let addHundred = getNumber + 100
+/*
+ *Functions that do the following
+ *Defines if the number is even or odd
+ *Adds 100 to the input number
+ *If the number is negative or positive
+ */
+
+function evenOrOdd (x) {
+    if (x%2 === 0){
+        return "Even"
+    } else
+        return "Odd"
+}
+function addOneHundred (oneHundredToValue){
+    return getNumber + 100
+}
+function isNegativeOrPositive (negOrPos){
+
+}
