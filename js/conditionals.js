@@ -137,27 +137,51 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-//Variables for the function
- let confirmation = confirm("Would you like to enter a number?")
- let getNumber = prompt("Enter your number")
- let addHundred = getNumber + 100
-/*
- *Functions that do the following
- *Defines if the number is even or odd
- *Adds 100 to the input number
- *If the number is negative or positive
- */
-
+//Function that initiates the sequence of events for this exercise
+startEvent()
+function startEvent(){
+    if (confirm("Would you like to analyze your number?") === true){
+        promptUser()
+    }
+}
+//Prompts user to input a number
+function promptUser(){
+    let userInput =  prompt("Type in a number!");
+    analyzeInput(userInput);
+}
+//If user puts in string instead of value it sends them back to prompt user, if value was an input----------------------
+//---->then functions proceed to evaluate the number.
+function analyzeInput (inputToAnalyze){
+    let parsedInput = parseInt(inputToAnalyze);
+    if (isNaN(parsedInput)){
+        alert("Please enter a value and not a string");
+        promptUser()
+    } else{
+        evenOrOdd(inputToAnalyze);
+    }
+}
+//Determines whether the input is odd or even.
 function evenOrOdd (x) {
     if (x%2 === 0){
-        return "Even"
+        alert("Your number is even!")
+        addOneHundred(x)
     } else
-        return "Odd"
+        alert("Your number is odd!")
+        addOneHundred(x)
 }
+//Adds 100 to the value of the number
 function addOneHundred (oneHundredToValue){
-    return getNumber + 100
+    let parsedInput = parseInt(oneHundredToValue)
+    alert("Your number plus one hundred is " + (100 + parsedInput) + "!")
+    isNegativeOrPositive(oneHundredToValue)
 }
+//determines if the number is negative or positive
 function isNegativeOrPositive (negOrPos){
+    if (negOrPos < 0){
+        alert("Your number is negative")
+    } else{
+        alert("Your number is positive")
+    }
 
 }
 
