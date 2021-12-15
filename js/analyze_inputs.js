@@ -9,17 +9,18 @@
 *                     * if the string's length is 1, output if the string(or char) is a vowel or not.
 *                     * Otherwise, output the length of the string.
 */
+// Asks the user if they would like their number, letter, or word?
 startAnalyzing()
 function startAnalyzing(){
     if (confirm("Would you like to analyze your number, letter or words?") === true){
         promptUser()
     }
 }
+// Prompts user for their input
 function promptUser(){
   let userInput =  prompt("Type a number, letter or word here.");
     analyzeInput(userInput);
 }
-
 // Function analyzeInput takes the input and determines where to send it depending on if it is a number or string.
 function analyzeInput (inputToAnalyze){
     let parsedInput = parseInt(inputToAnalyze);
@@ -29,8 +30,7 @@ function analyzeInput (inputToAnalyze){
         oddOrEven(parsedInput);
         }
 }
-
-//if input is a number it will evaluate if it's odd or even
+// If input is a number it will evaluate if it's odd or even
 function oddOrEven(oddOrEven){
     if (oddOrEven%2 === 0){
         alert("this number is Even");
@@ -40,7 +40,7 @@ function oddOrEven(oddOrEven){
         isItGreaterThanOrLessThan(oddOrEven);
     }
 }
-//once determined if odd or even it will determine if it is less than, greater than or equal to zero
+// Once determined if odd or even it will determine if it is less than, greater than or equal to zero
 function isItGreaterThanOrLessThan (greaterThanOrEqual){
     if (greaterThanOrEqual < 0){
         return alert('this number is less than zero');
@@ -48,8 +48,10 @@ function isItGreaterThanOrLessThan (greaterThanOrEqual){
        return alert('this number is greater than zero');
     }
 }
-//if input is a string this will determine how long the string is, if only 1 character will be sent to determine
-//if vowel or not
+/*
+ * If input is a string this will determine how long the string is, if only 1 character will be sent to determine
+ * if vowel or not.
+ */
 function stringLength (howLongIsString){
     if(howLongIsString.length > 1){
         alert("Your string is " + howLongIsString.length + " characters long");
@@ -57,7 +59,7 @@ function stringLength (howLongIsString){
         return analyzeVowel(howLongIsString);
     }
 }
-//this will determine if the 1 value string is a vowel.
+// This will determine if the 1 value string is a vowel.
 function analyzeVowel(vowel){
      switch (vowel){
          case "a":
