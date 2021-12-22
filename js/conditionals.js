@@ -175,9 +175,9 @@ function addOneHundred (oneHundredToValue){
 //determines if the number is negative or positive----------------------------------------------------------------------
 function isNegativeOrPositive (negOrPos){
     if (negOrPos < 0){
-        alert("Your number is negative")
+        return ("Your number is negative")
     } else{
-        alert("Your number is positive")
+        return ("Your number is positive")
     }
 
 }

@@ -36,7 +36,6 @@ while (counter <= 25){
 if(counter%2 === 0){
  console.log(counter);
 }
-
  counter++
 }
 
