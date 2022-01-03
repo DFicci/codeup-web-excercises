@@ -31,13 +31,49 @@
 
 // // TODO: MINI EXERCISE
 // // TODO: print all even numbers between 0 and 25;
-let counter = 0; // starting point
-while (counter <= 25){
-if(counter%2 === 0){
- console.log(counter);
+// let counter = 0; // starting point
+// while (counter <= 25){
+// if(counter%2 === 0){
+//  console.log(counter);
+// }
+//  counter++
+// }
+//
+// function add (num1, num2){
+//  return console.log(num1 + num2);
+// }
+// add(1,2);
+//
+// function square(numToSqr){
+//  return console.log(numToSqr * numToSqr);
+// }
+// square(5);
+//
+// function sumOfSquare (a, b){
+//  return console.log((a * a)+(b * b));
+// }
+// sumOfSquare(1,5)
+// FIZZ-BUZZZZZZZ
+// Write a function named getFizzBuzz(startingNum) which performs the following actions:
+//     If startingNum is divisible by 3
+// console log "fizz"
+// Else, if startingNum is divisible by 5
+// console log "buzz"
+// If startingNum is divisible by 3 AND divisible by 5
+// return a string which says "FIZZ BUZZ"
+// Thinking about getFizzBuzz(startingNum), let's console log the return value of this function
+// What if getFizzBuzz doesn't return a value (VOID)?
+// How do you want to handle that?
+
+function getFizzBuzz(startingNum) {
+ if(isNaN(startingNum)) {
+ return console.log("enter a value");
+ }else if(startingNum%3 === 0 && startingNum%5 === 0) {
+  return console.log("fizzbuzz");
+ } else if (startingNum%3 === 0) {
+  return console.log("fizz");
+ }else if (startingNum%5 === 0) {
+  return console.log("buzz");
+ }
 }
- counter++
-}
-
-
-
+getFizzBuzz(9)
