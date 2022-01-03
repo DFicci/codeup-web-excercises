@@ -65,15 +65,34 @@
 // What if getFizzBuzz doesn't return a value (VOID)?
 // How do you want to handle that?
 
-function getFizzBuzz(startingNum) {
- if(isNaN(startingNum)) {
- return console.log("enter a value");
- }else if(startingNum%3 === 0 && startingNum%5 === 0) {
-  return console.log("fizzbuzz");
- } else if (startingNum%3 === 0) {
-  return console.log("fizz");
- }else if (startingNum%5 === 0) {
-  return console.log("buzz");
+// function getFizzBuzz(startingNum) {
+//  if(isNaN(startingNum)) {
+//  return console.log("enter a value");
+//  }else if(startingNum%3 === 0 && startingNum%5 === 0) {
+//   return console.log("fizzbuzz");
+//  } else if (startingNum%3 === 0) {
+//   return console.log("fizz");
+//  }else if (startingNum%5 === 0) {
+//   return console.log("buzz");
+//  }
+// }
+// getFizzBuzz(9)
+
+// getPaswordInput
+// Define a function named getPassword() which performs the following actions:
+//     Using prompt(), alert(), variables, and a while-loop, ask the user to input their password until their entry matches your hard-coded password value.
+//     HINT: start by defining the correct password and don't forget to link your html file
+userInput()
+function userInput(){
+ let input = prompt("Please enter the password")
+ getPassword(input)
+}
+function getPassword (password){
+ let thisIsThePassword = "codeup"
+ while (password !== thisIsThePassword){
+  return alert("Access Denied")
+ }
+ if (password === thisIsThePassword){
+  return alert("Access Granted")
  }
 }
-getFizzBuzz(9)
