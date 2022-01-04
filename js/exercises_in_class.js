@@ -82,17 +82,100 @@
 // Define a function named getPassword() which performs the following actions:
 //     Using prompt(), alert(), variables, and a while-loop, ask the user to input their password until their entry matches your hard-coded password value.
 //     HINT: start by defining the correct password and don't forget to link your html file
-userInput()
-function userInput(){
- let input = prompt("Please enter the password")
- getPassword(input)
-}
-function getPassword (password){
- let thisIsThePassword = "codeup"
- while (password !== thisIsThePassword){
-  return alert("Access Denied")
+// userInput()
+// function userInput(){
+//  let input = prompt("Please enter the password")
+//  getPassword(input)
+// }
+// function getPassword (password){
+//  let thisIsThePassword = "codeup"
+//  while (password !== thisIsThePassword){
+//   return alert("Access Denied")
+//  }
+//  if (password === thisIsThePassword){
+//   return alert("Access Granted")
+//  }
+// }
+
+//need to fix-------------------------------------
+// getMeaningOfLife(1)
+// function getMeaningOfLife (meaningfulNum){
+//  let counter = 0;
+//
+//  if (!isNaN(meaningfulNum)){
+//   while(meaningfulNum !== counter){
+//    counter++;
+//    console.log(counter);
+//    ;
+//  }
+//   if (counter === 10){
+//    return console.log("The meaning of life, the universe, and everything is "+ meaningfulNum + " your meaningful number");
+//   }
+//  }
+// }---------------------------
+//cones started with
+// var allCones = Math.floor(Math.random() * 50) + 50;
+// var counter = 0;
+// //
+// do {
+//  counter++;
+//  console.log("i sold " + counter + " cones.");
+//  console.log("there are " + allCones + " cones available");
+//  console.log("cones that I tried to sell last time ", counter);
+//  var randomNum = Math.floor(Math.random() * 5) + 1;
+//
+//  if (randomNum > allCones) {
+//   console.log("I cannot sell you " + counter + ", I only have " + allCones + " left.")
+//  } else {
+//   allCones -= randomNum;
+//   console.log("I sold " + counter + " cones.");
+//  }
+// }
+//
+// while (allCones > 0);
+// console.log("Yay, i am all sold out of my cones")
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> only logs *if the iteration number is odd*
+onlyOdd(10)
+function onlyOdd (numOfIteration) {
+ for (let x = 0; x <= numOfIteration; x++) {
+  if (x % 2 !== 0) {
+   console.log(x + " is odd");
+  }
  }
- if (password === thisIsThePassword){
-  return alert("Access Granted")
+}
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> logs "This is an even iteration" on the evens
+//      -> logs "This is an odd iteration" on the odds
+evenOrOdd(20)
+function evenOrOdd(userNumIterations){
+ for (let x=0; x<= userNumIterations; x++) {
+  if (x % 2 === 0) {
+   console.log(x + " is even");
+  } else {
+   console.log(x + " is odd");
+  }
+ }
+}
+// TODO: MINI EXERCISE
+//      Make a new version of your getPassword function using a for-loop!
+//      -> The purpose of the for-loop is to only allow a maximum number of attempts
+//          -> If the max attempt used unsuccessfully, alert the user of such and RETURN or BREAK
+//      -> Once the user enters the correct password, use the 'break' keyword to end the loop
+//      -> After the loop concludes, alert the use they have entered the correct password
+
+function getPassword(userInputPassword){
+ let password = "1234qwer";
+ for ( let x = 0; x <= 3; x++ ){
+  if (userInputPassword === password){
+   alert("Congratulations, you're all signed in");
+  } else if (userInputPassword !== password){
+   alert("Please try again, you have " + counter + " attempts left out of " + attempts);
+  }
  }
 }
