@@ -139,29 +139,29 @@
 //      Write a function which uses a for-loop and
 //      -> accepts the number of times to iterate as a parameter
 //      -> only logs *if the iteration number is odd*
-onlyOdd(10)
-function onlyOdd (numOfIteration) {
- for (let x = 0; x <= numOfIteration; x++) {
-  if (x % 2 !== 0) {
-   console.log(x + " is odd");
-  }
- }
-}
+// onlyOdd(10)
+// function onlyOdd (numOfIteration) {
+//  for (let x = 0; x <= numOfIteration; x++) {
+//   if (x % 2 !== 0) {
+//    console.log(x + " is odd");
+//   }
+//  }
+// }
 // TODO: MINI EXERCISE
 //      Write a function which uses a for-loop and
 //      -> accepts the number of times to iterate as a parameter
 //      -> logs "This is an even iteration" on the evens
 //      -> logs "This is an odd iteration" on the odds
-evenOrOdd(20)
-function evenOrOdd(userNumIterations){
- for (let x=0; x<= userNumIterations; x++) {
-  if (x % 2 === 0) {
-   console.log(x + " is even");
-  } else {
-   console.log(x + " is odd");
-  }
- }
-}
+// evenOrOdd(20)
+// function evenOrOdd(userNumIterations){
+//  for (let x=0; x<= userNumIterations; x++) {
+//   if (x % 2 === 0) {
+//    console.log(x + " is even");
+//   } else {
+//    console.log(x + " is odd");
+//   }
+//  }
+// }
 // TODO: MINI EXERCISE
 //      Make a new version of your getPassword function using a for-loop!
 //      -> The purpose of the for-loop is to only allow a maximum number of attempts
@@ -169,13 +169,26 @@ function evenOrOdd(userNumIterations){
 //      -> Once the user enters the correct password, use the 'break' keyword to end the loop
 //      -> After the loop concludes, alert the use they have entered the correct password
 
-function getPassword(userInputPassword){
- let password = "1234qwer";
- for ( let x = 0; x <= 3; x++ ){
-  if (userInputPassword === password){
-   alert("Congratulations, you're all signed in");
-  } else if (userInputPassword !== password){
-   alert("Please try again, you have " + counter + " attempts left out of " + attempts);
-  }
- }
+// function getPassword(userInputPassword){
+//  let password = "1234qwer";
+//  for ( let x = 0; x <= 3; x++ ){
+//   if (userInputPassword === password){
+//    alert("Congratulations, you're all signed in");
+//   } else if (userInputPassword !== password){
+//    alert("Please try again, you have " + counter + " attempts left out of " + attempts);
+//   }
+//  }
+// }
+
+// -Create an array with five strings representing your favorite artists (music or otherwise) and store it in a variable called favoriteArtists
+// -Write a function that accepts an array as a parameter and...
+// -> logs the first, third, and last elements of that array
+// -Invoke your function and pass favoriteArtists as an argument
+
+let favoriteArtist = ['avicii', 'marshmello', 'atr', 'adtr', 'riseAgainst']
+function artist(favorite){
+ console.log(favorite[0])
+ console.log(favorite[2])
+ console.log(favorite[4])
 }
+artist(favoriteArtist)
