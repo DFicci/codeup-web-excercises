@@ -185,10 +185,104 @@
 // -> logs the first, third, and last elements of that array
 // -Invoke your function and pass favoriteArtists as an argument
 
-let favoriteArtist = ['avicii', 'marshmello', 'atr', 'adtr', 'riseAgainst']
-function artist(favorite){
- console.log(favorite[0])
- console.log(favorite[2])
- console.log(favorite[4])
+// let favoriteArtist = ['avicii', 'marshmello', 'atr', 'adtr', 'riseAgainst']
+// function artist(favorite){
+//  console.log(favorite[0])
+//  console.log(favorite[2])
+//  console.log(favorite[4])
+// }
+// artist(favoriteArtist)
+
+
+
+// var carOne = {};
+// carOne.make = 'Ford';
+// carOne.model = 'Taurus';
+// carOne.year = 2000;
+// console.log(carOne);
+//
+// var carTwo = {
+//     make : 'toyota',
+//     model : 'tundra',
+// };
+// console.log(carTwo);
+//
+// console.log('Make: ' + carOne.make)
+// console.log('Model: ' + carOne.model)
+// console.log('Year: ' + carOne.year)
+
+// Declare an array of two objects for movies
+// that have the following member values:
+// title (string)
+// year released (int)
+// rating (string)
+// director (string)
+// imdb rating (decimal)
+// academy award win (boolean)
+// Use imdb.com to look up the info or make up your own info
+// write a printMovie function that takes a movie as a parameter and prints its info.
+// call it with each of your array elements.
+// write a printMovies function that takes an array as a parameter, iterates over the array, and calls printMovie on each of the array elements (edited)
+let movies = [];
+let movie1 = {
+    title: 'The Town',
+    yearReleased: 2010,
+    rating: '7.5/10',
+    director: {
+        firstName: 'Ben',
+        lastName: 'Affleck',
+    },
+    imbdRating: 7.5,
+    academyAwardWin: false,
+};
+movies.push(movie1)
+let movie2 ={
+    title: 'Heat',
+    yearReleased: 1994,
+    rating: '7.5/10',
+    director: {
+        firstName: 'Michael',
+        lastName: 'Mann',
+    },
+    imbdRating: 7.5,
+    academyAwardWin: false,
+};
+movies.push(movie2)
+
+// printMovie(movie1)
+function printMovie (input){
+ console.log(input);
 }
-artist(favoriteArtist)
+printMovies(movies)
+function printMovies(movieArray){
+    movieArray.forEach(function (movie) {
+        printMovie(movie)
+    });
+}
+
+// Change the director member of your movies to an object
+// with firstName and lastName members
+// Make an array member for your movies called genres.
+// It is an array of string elements where each element
+// is one of your movies’ genres from imdb.com
+// and change your printMovie function
+// please cupdate as you complete this ungraded practice exercise (edited)
+
+
+
+// *** last part of MINI EXERCISE ***
+// Add a rate(rating) function to each of your movie objects.
+//     The function takes an int parameter called rating
+// Modify rate(rating) to set a myRating property on that object
+// modify printMovie to display myRating for each movie
+// 15 minutes
+
+movie1.rate = function (rating){
+    console.log(" i give this movie a " + rating)
+}
+movie1.rate(3)
+
+movie2.rate = function (rating){
+    console.log(" i give this movie a " + rating)
+}
+movie2.rate(3)

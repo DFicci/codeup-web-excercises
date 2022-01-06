@@ -54,12 +54,12 @@ names.forEach(function (name){
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    function firstName (input){
-        for (let i = 1; i <= names; i+= 1){
-            console.log(input[0])
-        }
-    }
-firstName(names)
+//     function firstName (input){
+//         for (let i = 1; i <= names; i+= 1){
+//             console.log(input[0])
+//         }
+//     }
+// firstName(names)
 
 
 
