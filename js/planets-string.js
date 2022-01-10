@@ -34,5 +34,5 @@
         console.log(`<ul>${eachPlanet}</ul>`);
     }
 
-    addUlAndLi(planetsArray)
+    addUlAndLi(planetsArray);
 })();
