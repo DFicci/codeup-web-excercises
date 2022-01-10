@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github</title>
+    <style>
+        #header {
+            background-color: black;
+            padding: 8px;
+        }
+
+        #body {
+            font-family: sans-serif;
+
+        }
+
+        #top {
+            background-color: gray;
+            padding: 15px;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px;
+            background-color: gray;;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: 1px outset black;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        #body {
+            background-color: white;
+        }
+
+        #table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-radius: 5px;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        td {
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<header id='header'>
+    <img src="img/github.png" alt="github"
+         width="50"
+         height="50"/>
+</header>
+<section id='top'>
+    <h2 id='codeup'><img src="img/codeup.jpeg" width="100px" height="100px" style="display: inline-block">
+        Codeup
+    </h2>
+</section>
+<section>
+    <div class="tab">
+        <button class="tablink"
+                onclick="openRepo(event,'Repositories')">
+            <a href="google.com">Repositories</a> 39
+        </button>
+        <button class="tablink"
+                onclick="people(event,'people')">
+            <a href="google.com">People</a> 39
+        </button>
+        <button class="tablink"
+                onclick="teams(event,'Teams')">
+            <a href="google.com">Team</a> 39
+        </button>
+        <button class="tablink"
+                onclick="projects(event,'Projects')">
+            <a href="google.com">Projects</a> 39
+        </button>
+        <button class="tablink"
+                onclick="settings(event,'Settings')">
+            <a href="google.com">Settings</a>
+        </button>
+    </div>
+</section>
+<body id='body'>
+<table id='table' class="center" style="background-color: lightgray;width: 100vw">
+    <tr>
+        <th style="float: left">Codeup Dev Team</th>
+    </tr>
+    <tr>
+        <td style="margin-bottom: auto; margin-top: auto">
+            <img src="img/randomguy.jpeg" alt="kent" width="50" height="50"><a href="facebook.com">Kent Beck</a>
+        </td>
+        <td>member</td>
+        <td>1 team</td>
+    </tr>
+    <tr>
+        <td style="margin-bottom: auto; margin-top: auto">
+            <img src="img/codeup.jpeg" alt="codeup" width="50" height="50"><a href="facebook.com">Codeup Web Dev</a>
+        </td>
+        <td><style></style></td>
+        <td>1 team</td>
+    </tr>
+    <td style="margin-bottom: auto; margin-top: auto">
+        <img src="img/otherrandomguy.jpeg" alt="codeup" width="50" height="50"><a href="facebook.com">Martin Fowler</a>
+    </td>
+    <td>member</td>
+    <td>0 teams</td>
+
+</table>
+</body>
+<footer>
+    2018 github, inc.
+    <a href="google.com">Terms</a>
+    <a href="google.com">Privacy</a>
+    <a href="google.com">Security</a>
+    <a href="google.com">Status</a>
+    <a href="google.com">Help</a>
+    <a href="google.com">Contact</a>
+    <a href="google.com">API</a>
+    <a href="google.com">Training</a>
+</footer>
+</html>
