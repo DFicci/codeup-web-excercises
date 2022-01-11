@@ -1,0 +1,45 @@
+#fancy-header{
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+    color: powderblue;
+}
+#background {
+    background-image: url("https://199lj33nqk3p88xz03dvn481-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/codey-1.png");
+    background-color: lightslategrey;
+    font-family: sans-serif;
+}
+#motherboard {
+    height: 500px;
+    width: 500px;
+}
+#meeting {
+    height: 500px;
+    width: 500px;
+}
+#technology {
+    height: 500px;
+    width: 500px;
+}
+#city {
+    height: 500px;
+    width: 500px;
+}
+ol{
+    list-style-type: square;
+}
+ul{
+    list-style-type: lower-roman;
+}
+.table, td {
+    border: 1px solid black;
+    padding: 10px;
+    font-family: serif;;
+}
+
+a:active{
+    color: blue;
+}

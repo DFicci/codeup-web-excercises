@@ -5,35 +5,30 @@
     <title>Register With Us</title>
 </head>
 <body>
-<form method="get" action="https://request-inspector.glitch.me/">
+<form method="post" action="https://request-inspector.glitch.me/">
     <label>
         <h3>Please enter a valid Email and Password: </h3>
-        <input type="email" placeholder="Enter email here">
-        <input type="password" placeholder="Enter password here">
-    </label>
-    <label>
-        <button type="submit">Submit</button>
+        <input name='email' type="email" placeholder="Enter email here">
+        <input name='password' type="password" placeholder="Enter password here">
     </label>
     <br>
     <hr>
     <label>
         <h3>Where did you hear about us?</h3>
         Billboard
-        <input type="radio" name="Billboard" value="a"><br>
+        <input type="radio" name="reference" value="a"><br>
         Radio Advertisement
-        <input type="radio" name="Radio Advertisement" value="b"><br>
+        <input type="radio" name="reference" value="b"><br>
         Internet Advertisement
-        <input type="radio" name="Internet Advertisement" value="c"><br>
+        <input type="radio" name="reference" value="c"><br>
         Other
-        <input type="radio" name="Other" value="d"><br>
-        <button type="submit">Submit</button>
+        <input type="radio" name="reference" value="d"><br>
     </label>
     <br>
     <hr>
     <label>
         <h3>Tell us a little about yourself:</h3>
-        <textarea style="width: 200px;height: 200px">Write about yourself here.</textarea>
-        <button type="submit">Submit</button>
+        <textarea name ='about' style="width: 200px;height: 200px">Write about yourself here.</textarea>
     </label>
     <br>
     <hr>
@@ -45,8 +40,8 @@
             <option value="explorer">Explorer</option>
             <option value="other">Other</option>
         </select>
-        <button type="submit">Submit</button>
     </label>
+    <button type="submit">Submit</button>
 </form>
 
 </body>

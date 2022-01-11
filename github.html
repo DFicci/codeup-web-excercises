@@ -38,13 +38,6 @@
         #body {
             background-color: white;
         }
-
-        #table {
-            border: 1px solid black;
-            border-collapse: collapse;
-            border-radius: 5px;
-        }
-
         table.center {
             margin-left: auto;
             margin-right: auto;
@@ -65,37 +58,35 @@
          width="50"
          height="50"/>
 </header>
+<body id='body'>
 <section id='top'>
     <h2 id='codeup'><img src="img/codeup.jpeg" width="100px" height="100px" style="display: inline-block">
         Codeup
     </h2>
 </section>
-<section>
-    <div class="tab">
-        <button class="tablink"
-                onclick="openRepo(event,'Repositories')">
-            <a href="google.com">Repositories</a> 39
-        </button>
-        <button class="tablink"
-                onclick="people(event,'people')">
-            <a href="google.com">People</a> 39
-        </button>
-        <button class="tablink"
-                onclick="teams(event,'Teams')">
-            <a href="google.com">Team</a> 39
-        </button>
-        <button class="tablink"
-                onclick="projects(event,'Projects')">
-            <a href="google.com">Projects</a> 39
-        </button>
-        <button class="tablink"
-                onclick="settings(event,'Settings')">
-            <a href="google.com">Settings</a>
-        </button>
-    </div>
+<section id='tab-container'>
+    <button class="tablink"
+            onclick="openRepo(event,'Repositories')">
+        <a href="google.com">Repositories</a> 39
+    </button>
+    <button class="tablink"
+            onclick="people(event,'people')">
+        <a href="google.com">People</a> 39
+    </button>
+    <button class="tablink"
+            onclick="teams(event,'Teams')">
+        <a href="google.com">Team</a> 39
+    </button>
+    <button class="tablink"
+            onclick="projects(event,'Projects')">
+        <a href="google.com">Projects</a> 39
+    </button>
+    <button class="tablink"
+            onclick="settings(event,'Settings')">
+        <a href="google.com">Settings</a>
+    </button>
 </section>
-<body id='body'>
-<table id='table' class="center" style="background-color: lightgray;width: 100vw">
+<table id='web-dev-container' class="center" style=" background-color: lightgray;width: 100vw">
     <tr>
         <th style="float: left">Codeup Dev Team</th>
     </tr>
@@ -110,7 +101,7 @@
         <td style="margin-bottom: auto; margin-top: auto">
             <img src="img/codeup.jpeg" alt="codeup" width="50" height="50"><a href="facebook.com">Codeup Web Dev</a>
         </td>
-        <td><style></style></td>
+        <td>member</td>
         <td>1 team</td>
     </tr>
     <td style="margin-bottom: auto; margin-top: auto">
