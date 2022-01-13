@@ -223,42 +223,42 @@
 // write a printMovie function that takes a movie as a parameter and prints its info.
 // call it with each of your array elements.
 // write a printMovies function that takes an array as a parameter, iterates over the array, and calls printMovie on each of the array elements (edited)
-let movies = [];
-let movie1 = {
-    title: 'The Town',
-    yearReleased: 2010,
-    rating: '7.5/10',
-    director: {
-        firstName: 'Ben',
-        lastName: 'Affleck',
-    },
-    imbdRating: 7.5,
-    academyAwardWin: false,
-};
-movies.push(movie1)
-let movie2 ={
-    title: 'Heat',
-    yearReleased: 1994,
-    rating: '7.5/10',
-    director: {
-        firstName: 'Michael',
-        lastName: 'Mann',
-    },
-    imbdRating: 7.5,
-    academyAwardWin: false,
-};
-movies.push(movie2)
-
-// printMovie(movie1)
-function printMovie (input){
- console.log(input);
-}
-printMovies(movies)
-function printMovies(movieArray){
-    movieArray.forEach(function (movie) {
-        printMovie(movie)
-    });
-}
+// let movies = [];
+// let movie1 = {
+//     title: 'The Town',
+//     yearReleased: 2010,
+//     rating: '7.5/10',
+//     director: {
+//         firstName: 'Ben',
+//         lastName: 'Affleck',
+//     },
+//     imbdRating: 7.5,
+//     academyAwardWin: false,
+// };
+// movies.push(movie1)
+// let movie2 ={
+//     title: 'Heat',
+//     yearReleased: 1994,
+//     rating: '7.5/10',
+//     director: {
+//         firstName: 'Michael',
+//         lastName: 'Mann',
+//     },
+//     imbdRating: 7.5,
+//     academyAwardWin: false,
+// };
+// movies.push(movie2)
+//
+// // printMovie(movie1)
+// function printMovie (input){
+//  console.log(input);
+// }
+// printMovies(movies)
+// function printMovies(movieArray){
+//     movieArray.forEach(function (movie) {
+//         printMovie(movie)
+//     });
+// }
 
 // Change the director member of your movies to an object
 // with firstName and lastName members
@@ -277,12 +277,41 @@ function printMovies(movieArray){
 // modify printMovie to display myRating for each movie
 // 15 minutes
 
-movie1.rate = function (rating){
-    console.log(" i give this movie a " + rating)
-}
-movie1.rate(3)
+// movie1.rate = function (rating){
+//     console.log(" i give this movie a " + rating)
+// }
+// movie1.rate(3)
+//
+// movie2.rate = function (rating){
+//     console.log(" i give this movie a " + rating)
+// }
+// movie2.rate(3)
 
-movie2.rate = function (rating){
-    console.log(" i give this movie a " + rating)
-}
-movie2.rate(3)
+// Create a function called arrayToString.
+//     The function takes a parameter called myArray.
+//     It returns a string that is the concatenation of all the elements in myArray.
+//     This function is essentially your own version of join.
+//     Therefore, you cannot use join in your function body :slightly_smiling_face:
+
+let num = [1,2,3,4,5,6];
+let str = '';
+let numLength = num.length;
+function arrayToString (numArray){
+    for (let i = 0; i < numLength; i++) {
+    if (i < numLength - 1){
+        str += num[i]
+        return str +=','
+    }
+        }
+    }
+
+
+console.log(arrayToString(num))
+
+
+
+
+
+
+
+
