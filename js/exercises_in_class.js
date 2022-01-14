@@ -293,20 +293,37 @@
 //     This function is essentially your own version of join.
 //     Therefore, you cannot use join in your function body :slightly_smiling_face:
 
-let num = [1,2,3,4,5,6];
-let str = '';
-let numLength = num.length;
-function arrayToString (numArray){
-    for (let i = 0; i < numLength; i++) {
-    if (i < numLength - 1){
-        str += num[i]
-        return str +=','
-    }
-        }
-    }
+// let num = [1,2,3,4,5,6];
+// let str = '';
+// let numLength = num.length;
+// function arrayToString (numArray){
+//     for (let i = 0; i < numLength; i++) {
+//     if (i < numLength - 1){
+//         str += num[i]
+//         return str +=','
+//     }
+//         }
+//     }
+//
+//
+// console.log(arrayToString(num))
 
 
-console.log(arrayToString(num))
+// Define a function named removeAll(array, value) that takes in two arguments. The first argument should be an array and the second argument should be a value you wish to remove
+// Given the following array as an argument (do not define this array inside your function - pass it in as an argument)
+var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+// removeAll(bugs, "ant") should return ["mosquito", "scorpion", "mosquito", "typo", "reference error", "type error"]
+// removeAll(bugs, "mosquito") should return ["ant", "scorpion", "ant", "ant", "typo", "reference error", "type error"]
+// removeAll(bugs, "roach") should return the original array b/c “roach” has no occurrances.
+
+function removeALL(array,value){
+   return array.filter(function (filter){
+       return filter !== value;
+   });
+}
+console.log(removeALL(bugs, "mosquito" ));
+console.log(removeALL(bugs, "ant"));
+console.log(removeALL(bugs,"roach"));
 
 
 
