@@ -329,14 +329,15 @@
 
 
 function averageOfNumbers(arrayOfNumbers) {
- let sum = 0 ;
+ let sum = 0;
 
   arrayOfNumbers.forEach(function (number){
-   sum = sum += number
+      sum = sum + number;
   });
  return sum / arrayOfNumbers;
 }
- console.log(averageOfNumbers([1,2,3,4,5,6]))
+
+console.log(averageOfNumbers([1,2,3,4,5,6]))
 
 
 
