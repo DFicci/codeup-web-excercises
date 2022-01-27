@@ -5,6 +5,14 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<input type="text" id='name' placeholder="whats your name?">
+<button id="my-button" >Submit</button>
+<hr>
+<button id="header-text" value="no">Change header text</button>
+<button id="sub-header-blue" value="no">Change sub-header color</button>
+<button id="li-color-change" value="no">Change the list items color</button>
+<button id="convert-sub-par" value="no">Change sub-paragraph</button>
+
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -25,39 +33,148 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<!--<form>-->
+
+<!--</form>-->
+
 <script>
     (function () {
         "use strict";
+
+        function userInput() {
+            var aName = document.getElementById('name').value
+            document.getElementById('main-header').innerHTML = 'Hello ' + aName + "!"
+
+        }
+
+        document.getElementById('my-button').addEventListener('click', userInput)
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
 
+
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        //mainHeader.innerHTML = "JavaScript is Cool";
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
+        var headerText = document.getElementById('header-text');
+        var changeHeaderText = function () {
+            mainHeader.innerHTML = "Javascript is Cool";
+        };
+        headerText.addEventListener('click', toggleChangeheader)
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (let i = 0; i < listItems.length; i++) {
-            var liDbid1 = listItems[i].getAttribute('data-dbid');
-            if (i % 2 !== 0) {
-                listItems[i].style.color = 'grey';
-            }
-            if (liDbid1 === "1") {
-                listItems[0].style.color = 'blue';
+        function toggleChangeheader() {
+            if (headerText.value === "yes") {
+                headerText.value = 'no'
+                mainHeader.innerHTML = 'Hello World!'
+
+
+            } else if (changeSub.value === 'no') {
+                headerText.value = 'yes'
+                changeHeaderText()
             }
         }
 
+        // TODO: Uncomment the next line and get the sub header element by id
+        var subHeader = document.getElementById("sub-header");
+        var subTurnsBlue = document.getElementById('sub-header-blue');
+        var blueSubText = function () {
+            subHeader.style.color = 'blue';
+        }
+        var blackSubText = function () {
+            subHeader.style.color = 'black';
+        }
+
+        subTurnsBlue.addEventListener('click', toggleChangeSubHeader)
+
+        function toggleChangeSubHeader() {
+            if (subTurnsBlue.value === "yes") {
+                subTurnsBlue.value = 'no'
+                blackSubText()
+
+            } else if (subTurnsBlue.value === 'no') {
+                subTurnsBlue.value = 'yes'
+                blueSubText()
+            }
+        }
+
+        // TODO: Set the text color of subHeader to blue
+        // subHeader.style.color = "blue";
+        // TODO: Uncomment the next line and get all list items
+        var listItems = document.getElementsByTagName('li');
+        var greyListItems = document.getElementById('li-color-change')
+        var turnsLiGrey = function () {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 !== 0) {
+                    listItems[i].style.color = 'grey';
+                }
+            }
+        }
+
+        var turnsLiblack = function () {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 !== 0) {
+                    listItems[i].style.color = 'black';
+                }
+            }
+        }
+
+        greyListItems.addEventListener('click', toggleChangeLi)
+
+        function toggleChangeLi() {
+            if (greyListItems.value === "yes") {
+                greyListItems.value = 'no'
+                turnsLiblack()
+
+            } else if (changeSub.value === 'no') {
+                greyListItems.value = 'yes'
+
+                turnsLiGrey()
+            }
+        }
+
+        // TODO: Set text color on every other list item to grey
+        // TODO: Set text color of li with dbid = 1 to blue
+        // for (let i = 0; i < listItems.length; i++) {
+        //     var liDbid1 = listItems[i].getAttribute('data-dbid');
+        //
+        //     if (i % 2 !== 0) {
+        //         listItems[i].style.color = 'grey';
+        //     }
+        //     if (liDbid1 === "1") {
+        //         listItems[0].style.color = 'blue';
+        //     }
+        // }
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!"
+        // subParagraphs[0].innerText = "Mission Accomplished!"
+        var accomplishedText = document.getElementsByClassName('sub-paragraph')[0];
+        var changeSub = document.getElementById('convert-sub-par');
+
+        // var subParaChange = function () {
+        //
+        //     accomplishedText.innerHTML = 'Mission Accomplished';
+        //
+        //     }
+        changeSub.addEventListener('click', toggleChangeSub)
+
+        function toggleChangeSub() {
+            if (changeSub.value === "yes") {
+                changeSub.value = 'no'
+                accomplishedText.innerHTML = '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\n' +
+                    '    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n' +
+                    '    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n' +
+                    '    aliquip ex ea commodo consequat. Duis aute irure dolor in\n' +
+                    '    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n' +
+                    '    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in\n' +
+                    '    culpa qui officia deserunt mollit anim id est laborum.'
+
+            } else if (changeSub.value === 'no') {
+                accomplishedText.innerHTML = 'mission accomplished'
+                changeSub.value = 'yes'
+            }
+        }
     })();
 </script>
 </body>
