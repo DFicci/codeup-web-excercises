@@ -14,6 +14,9 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        .highlight{
+            background-color: #0fb784;
+        }
     </style>
 </head>
 <body>
@@ -92,13 +95,14 @@
     <!--    questions and answers from https://www.nps.gov/aboutus/faqs.htm-->
 </dl>
 <script>
+    $().ready(function (){
     $('#toggle').click(function () {
-        $('dd').toggleClass('invisible')
+        $('dd').toggleClass('invisible');
     });
     $('dt').click(function () {
-            $(this).css('background-color', 'gray');
-            $('dt').css('background-color', 'gray')
+            $(this).toggleClass('highlight');
         });
+    });
 </script>
 </body>
 </html>
