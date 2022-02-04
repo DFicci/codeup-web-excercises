@@ -194,7 +194,6 @@
 // artist(favoriteArtist)
 
 
-
 // var carOne = {};
 // carOne.make = 'Ford';
 // carOne.model = 'Taurus';
@@ -269,7 +268,6 @@
 // please cupdate as you complete this ungraded practice exercise (edited)
 
 
-
 // *** last part of MINI EXERCISE ***
 // Add a rate(rating) function to each of your movie objects.
 //     The function takes an int parameter called rating
@@ -326,8 +324,6 @@
 // console.log(removeALL(bugs,"roach"));
 
 
-
-
 // function averageOfNumbers(arrayOfNumbers) {
 //  let sum = 0;
 //
@@ -347,12 +343,24 @@
 // i.e., (a to the power of 2) + (b to the power of 2)
 // e.g., console.log(sumOfSquares(2, 3));
 // will return 13 (edited)
+//
+// function sumOfSquares(a, b){
+//     return console.log((a ** 2) + (b ** 2))
+// }
+//
+// sumOfSquares(2,3)
 
-function sumOfSquares(a, b){
-    return console.log((a ** 2) + (b ** 2))
+// Write a function called convertLowHighToObject that takes in a string  that represents the low and high temperature
+// in this format '35, 42' (assuming low will always be the left value and high the right) and returns an object
+// with theproperties 'low' and 'high' with the values of those respective properties set to the corresponding values in
+// the input string.
+
+function convertLowHighObject(lowHighStr) {
+    let lowHighArr = lowHighStr.split(', ');
+    return {
+        low: parseInt(lowHighArr[0]),
+        high: parseInt(lowHighArr[1])
+    }
 }
-
-sumOfSquares(2,3)
-
-
+console.log(convertLowHighObject("32, 40"));
 
