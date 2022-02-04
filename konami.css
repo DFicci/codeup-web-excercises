@@ -1,0 +1,22 @@
+*{
+    background-color: #0fb784;
+    text-align: center;
+}
+body{
+    position: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.activatedCheat{
+    visibility: hidden;
+}
+.music {
+    visibility: hidden;
+}
+.head{
+    font-size: 60px;
+}
+.konami p{
+    font-size: 40px;
+}

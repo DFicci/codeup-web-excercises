@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="konami.css">
+</head>
+<body>
+
+<div class="konami">
+    <h1 class="head">Konami Code</h1>
+    <p>Enter in the Cheat code!</p>
+    <p>up up down down left right left right b a enter</p>
+</div>
+<div class="activatedCheat">
+    <h1 class="newHead">Building the future and keeping the past alive are one and the same thing. - Snake</h1>
+    <iframe
+            class="music newHead"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allowFullScreen=""
+            height="80"
+            src="https://open.spotify.com/embed/track/1GVbuBWuZm5W6rCiclnClx?utm_source=generator&theme=0"
+            width="50%">
+
+    </iframe>
+</div>
+
+
+<script src="/js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    var konamiCheatCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'return'];
+    var keyCodesNeeded = {
+        38: 'up',
+        40: 'down',
+        37: 'left',
+        39: 'right',
+        66: 'b',
+        65: 'a',
+        13: 'return'
+    };
+
+    var counter = 0;
+
+    $(document).keyup(function (e) {
+        var keyPressed = keyCodesNeeded[e.keyCode];
+        var cheatCodeEntered = konamiCheatCode[counter];
+        if (keyPressed === cheatCodeEntered) {
+            counter++
+            if (counter === konamiCheatCode.length) {
+                cheatActivated();
+                counter = 0;
+                console.log(e);
+                $('.activatedCheat').fadeOut(0)
+                $('.activatedCheat').fadeIn(2000)
+            }
+        } else {
+            counter = 0;
+        }
+    });
+
+    function cheatActivated() {
+        $('.newHead').css('text-align', 'center').css('visibility', 'visible')
+        $('h1').css('color', '#fff')
+        $('#metal-gear-solid').css('visibility', 'visible')
+        $('p').css('visibility', 'hidden')
+        $('.music').css('visibility', 'visible')
+        $('html').css('background-color', 'black')
+        $('.konami').css('visibility', 'hidden')
+        $('body', 'html').css('background-image', 'url("img/MetalGearSolidSnake.jpg")')
+    }
+</script>
+</body>
+</html>
