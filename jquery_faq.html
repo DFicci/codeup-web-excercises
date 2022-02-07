@@ -14,7 +14,8 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        .highlight{
+
+        .highlight {
             background-color: #0fb784;
         }
     </style>
@@ -33,7 +34,7 @@
 
     <dt>How many employees are in the National Park Service?</dt>
     <dd class="invisible">
-        <ul>
+        <ul class="unordered-list">
             <li>Permanent, temporary, and seasonal employees: Approximately 20,000</li>
             <li>Volunteers: More than 279,000 in 2019</li>
         </ul>
@@ -69,7 +70,7 @@
 
     <dt>What is the largest national park site? Smallest?</dt>
     <dd class="invisible">
-        <ul>
+        <ul class="unordered-list">
             <li>Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</li>
             <li>Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</li>
         </ul>
@@ -91,16 +92,33 @@
         Learn more about service animals in national parks,
         including the difference between service animals and emotional support animals.
     </dd>
+
+    <dt>List of national parks</dt>
+    <dd class="invisible">
+        <ul class="unordered-list">
+            <li><h3>Yellowstone</h3></li>
+            <li><h3>Mount Rainier</h3></li>
+            <li><h3>Capitol Reef</h3></li>
+            <li><h3>badlands</h3></li>
+            <li><h3>Rocky Mountains</h3></li>
+        </ul>
+    </dd>
     <a id="toggle">View the answers here</a>
+    <button id="yellow">Highlight list</button>
     <!--    questions and answers from https://www.nps.gov/aboutus/faqs.htm-->
 </dl>
 <script>
-    $().ready(function (){
-    $('#toggle').click(function () {
-        $('dd').toggleClass('invisible');
-    });
-    $('dt').click(function () {
+    $().ready(function () {
+        $('#toggle').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+        $('dt').click(function () {
             $(this).toggleClass('highlight');
+        });
+        $('#yellow').click(function () {
+            $('ul').each(function (){
+                $(this).children().last().css('background-color','yellow')
+            })
         });
     });
 </script>
