@@ -41,22 +41,22 @@
     });
 
         var alamoInfo = {
-        address: "The Alamo",
+        address: "300 alamo plaza san antonio tx 78205",
         popupHTML: "<p>Remember the Alamo!</p>"
     };
 
         function placeMarkerAndPopup(info, token, map) {
-            return  new mapboxgl.Marker()
-                .setLngLat(geocode(info.address, token))
-                .addTo(map)
-            // geocode(info.address, token).then(function(coordinates) {
-            //     // var popup = new mapboxgl.Popup()
-            //     //   .setHTML(info.popupHTML);
-            //     console.log(coordinates)
-            //
-            //      .setPopup(popup);
-         // });
-     }
+            geocode(info.address, token).then(function(coordinates) {
+                var popup = new mapboxgl.Popup()
+                    .setHTML(info.popupHTML);
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map)
+                    .setPopup(popup);
+                popup.addTo(map);
+            });
+        }
+
         function geocode(search, token) {
             var baseUrl = 'https://api.mapbox.com';
             var endPoint = '/geocoding/v5/mapbox.places/';
