@@ -18,6 +18,9 @@
         .highlight {
             background-color: #0fb784;
         }
+        .toggleYellow{
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
@@ -112,12 +115,14 @@
         $('#toggle').click(function () {
             $('dd').toggleClass('invisible');
         });
+
         $('dt').click(function () {
             $(this).toggleClass('highlight');
         });
+
         $('#yellow').click(function () {
             $('ul').each(function (){
-                $(this).children().last().css('background-color','yellow')
+                $(this).children().last().toggleClass('toggleYellow')
             })
         });
     });
