@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>First Mapbox Map</title>
     <!-- Mapbox CSS -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
     <style>
         #map {
@@ -29,46 +29,65 @@
 <script>
 
 
-        var accessToken = MAPBOX_TOKEN;
+    var accessToken = MAPBOX_TOKEN;
 
-        mapboxgl.accessToken = accessToken;
+    mapboxgl.accessToken = accessToken;
 
-        var map = new mapboxgl.Map({
+    var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
-        center: [-98.4916, 29.4252]
+        center: [-95.463600, 29.740700]
     });
 
-        var alamoInfo = {
-        address: "300 alamo plaza san antonio tx 78205",
-        popupHTML: "<p>Remember the Alamo!</p>"
-    };
+    var resturantAddress = [
+        {
+            name: "Sozo Sushi Lounge",
+            address: "1700 Post Oak Blvd #250 Houston TX 77056",
+            popupHTML: "<p>My Favorite Sushi Place In Houston</p>",
+        },
+        {
+            name: "Hungry's",
+            address: "2356 Rice Boulevard fl 2 Houston TX 77005",
+            popupHTML: "<p>Great Date Night Resturant, Pricey Though.</p>",
+        },
+        {
+            name: "Sweet Paris",
+            address: "23501 Cinco Ranch Blvd Suite S120 Katy TX 77494",
+            popupHTML: "<p>Great Breakfast Crepes</p>",
+        }
+    ];
 
-        function placeMarkerAndPopup(info, token, map) {
-            geocode(info.address, token).then(function(coordinates) {
-                var popup = new mapboxgl.Popup()
-                    .setHTML(info.popupHTML);
-                var marker = new mapboxgl.Marker()
-                    .setLngLat(coordinates)
-                    .addTo(map)
-                    .setPopup(popup);
-                popup.addTo(map);
+
+    resturantAddress.forEach(function (location) {
+        placeMarkerAndPopup(location, accessToken, map);
+    });
+
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function (coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.name, info.popupHTML)
+                .addTo(map);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+        });
+    }
+
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function (res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function (data) {
+                return data.features[0].center;
             });
-        }
+    }
 
-        function geocode(search, token) {
-            var baseUrl = 'https://api.mapbox.com';
-            var endPoint = '/geocoding/v5/mapbox.places/';
-            return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-                .then(function(res) {
-                    return res.json();
-                    // to get all the data from the request, comment out the following three lines...
-                }).then(function(data) {
-                    return data.features[0].center;
-                });
-        }
-        placeMarkerAndPopup(alamoInfo, accessToken, map);
 
 </script>
 </body>
