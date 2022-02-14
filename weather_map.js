@@ -64,7 +64,7 @@ function showWeatherData(data) {
         `
                     <div class="weather-info">
                         <div>Humidity</div>
-                        <div>${humidity}%</div>
+                        <div>${humidity} %</div>
                     </div>
                     <div class="weather-info">
                         <div>Pressure</div>
@@ -131,6 +131,37 @@ map.addControl(
 function onMoveEnd() {
     var coords = map.getCenter();
     getWeatherData(coords);
+}
+
+map.on("click", function(event) {
+    addPopupOnCoords(event.lngLat)
+});
+
+async function addPopupOnCoords(lngLat) {
+$('.mapboxgl-marker').remove()
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat(lngLat)
+        .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat([lngLat.lng, lngLat.lat])
+        .setHTML(`<p>${lngLat}</p>`)
+        .addTo(map);
+
+}
+
+function reverseGeocode(coordinates, token) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+        .then(function(res) {
+            return res.json();
+        })
+        // to get all the data from the request, comment out the following three lines...
+        .then(function(data) {
+            return data;
+        });
 }
 
 map.on('moveend', onMoveEnd);
