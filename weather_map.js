@@ -137,7 +137,7 @@ map.on("click", function(event) {
     addPopupOnCoords(event.lngLat)
 });
 
-async function addPopupOnCoords(lngLat) {
+function addPopupOnCoords(lngLat) {
 $('.mapboxgl-marker').remove()
 
     var marker = new mapboxgl.Marker()
@@ -151,17 +151,5 @@ $('.mapboxgl-marker').remove()
 
 }
 
-function reverseGeocode(coordinates, token) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
-        .then(function(res) {
-            return res.json();
-        })
-        // to get all the data from the request, comment out the following three lines...
-        .then(function(data) {
-            return data;
-        });
-}
 
 map.on('moveend', onMoveEnd);
