@@ -144,3 +144,39 @@ body {
 .mapboxgl-popup-content{
     color: black;
 }
+@media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1024px) {
+
+        #map{
+            height: 350px !important;
+            width: 450px !important;
+            margin-top: 100px !important;
+            padding-top: 200px !important;
+        }
+        .current-info{
+           display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: space-around !important;
+        }
+        .future-forecast{
+            overflow-x: scroll;
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #map{
+        height: 350px;
+        width: 450px;
+    }
+    .future-forecast{
+        overflow-x: scroll;
+        padding-left: 500px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    #map{
+        margin: 0;
+        padding: 0;
+    }
+}
