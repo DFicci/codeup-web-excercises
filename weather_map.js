@@ -91,17 +91,17 @@ function showWeatherData(data) {
                     <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon"
                          class="w-icon">
                     <div class="other">
-                        <div class="day">${window.moment(day.dt * 1000).format('dddd')}</div>
-                        <div class="temperature">Night: ${day.temp.night.toFixed(1)}\u00B0F</div>
+                        <div class="day">${window.moment(day.dt * 1000).format('ddd')}</div>
                         <div class="temperature">Day: ${day.temp.day.toFixed(1)}\u00B0F</div>
+                        <div class="temperature">Night: ${day.temp.night.toFixed(1)}\u00B0F</div>
                     </div>`
         } else {
             otherDayForcast += `
             <div class="daily-forecast">
                 <div class="day">${window.moment(day.dt * 1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+                 <div class="temperature">Day: ${day.temp.day.toFixed(1)}\u00B0F</div>
                 <div class="temperature">Night: ${day.temp.night.toFixed(1)}\u00B0F</div>
-                <div class="temperature">Day: ${day.temp.day.toFixed(1)}\u00B0F</div>
             </div>`
         }
     });
@@ -153,3 +153,5 @@ $('.mapboxgl-marker').remove()
 
 
 map.on('moveend', onMoveEnd);
+
+

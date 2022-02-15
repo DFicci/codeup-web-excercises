@@ -145,14 +145,12 @@ body {
     color: black;
 }
 @media only screen and (max-width: 768px){
-    @media only screen and (max-width: 1024px) {
 
         #map{
-            height: 350px !important;
-            width: 450px !important;
-            margin-top: 100px !important;
-            padding-top: 200px !important;
+            height: 250px !important;
+            width: 300px !important;
         }
+
         .current-info{
            display: flex !important;
             flex-wrap: wrap !important;
@@ -162,7 +160,7 @@ body {
             overflow-x: scroll;
         }
     }
-}
+
 @media only screen and (max-width: 1024px) {
     #map{
         height: 350px;
