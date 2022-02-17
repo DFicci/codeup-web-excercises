@@ -60,27 +60,27 @@ console.log(avgYears);
 //TODO: use .reduce to get the longest email from the list of users.
 const longestEmail = users.reduce((longest, user) => {
     //taking the longest email and displaying it in the console log
-    return user.email.length > longest.length ? user.email :longest;
+    return user.email.length > longest.length ? user.email : longest;
 }, '');
 console.log(longestEmail);
 
 //TODO: get the list of user's names in a single string using .reduce.
 const listOfUsers = users.reduce((names, user) => {
-    if (names !== ''){
+    if (names !== '') {
         names += ', ';
     }
     return names + user.name;
-},'');
+}, '');
 console.log(listOfUsers);
 
 //TODO: BONUS - use .reduce to get the unique list of languages from the list of users.
-const getUniqueListOfLanguages = users.reduce((languages, user)=>{
-    user.languages.forEach((language) =>{
-        if(!languages.includes(language)){
+const getUniqueListOfLanguages = users.reduce((languages, user) => {
+    user.languages.forEach((language) => {
+        if (!languages.includes(language)) {
             languages.push(language)
         }
     });
     return languages;
-},[]);
+}, []);
 
 console.log(getUniqueListOfLanguages)
