@@ -355,12 +355,28 @@
 // with theproperties 'low' and 'high' with the values of those respective properties set to the corresponding values in
 // the input string.
 
-function convertLowHighObject(lowHighStr) {
-    let lowHighArr = lowHighStr.split(', ');
-    return {
-        low: parseInt(lowHighArr[0]),
-        high: parseInt(lowHighArr[1])
+// function convertLowHighObject(lowHighStr) {
+//     let lowHighArr = lowHighStr.split(', ');
+//     return {
+//         low: parseInt(lowHighArr[0]),
+//         high: parseInt(lowHighArr[1])
+//     }
+// }
+// console.log(convertLowHighObject("32, 40"));
+
+function timesLetterRepeats(string) {
+    var lettersRepeated = {};
+    for (var i=0; i<string.length;i++) {
+        var letters = string.charAt(i);
+            if (lettersRepeated[letters]) {
+            lettersRepeated[letters]++;
+        } else {
+            lettersRepeated[letters] = 1;
+        }
     }
-}
-console.log(convertLowHighObject("32, 40"));
+
+    return lettersRepeated;
+};
+
+console.log(timesLetterRepeats('asdfafhadhfgsdg'));
 

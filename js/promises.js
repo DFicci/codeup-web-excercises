@@ -1,5 +1,4 @@
 //TODO: Create function that gets users date and displays their last commit date
-
 function getUsersHistory(user){
     let gitHubUrl = `https://api.github.com/repos/${user}/codeup-web-excercises/commits`;
     return fetch(gitHubUrl, {headers: {'Authorization': `token ${GITHUB_API_KEY}`}})
